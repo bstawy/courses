@@ -1,0 +1,28 @@
+flutter_native_splash:
+  # IOS and Android 11 and below
+
+  # Light mode properties
+  color: "#FFFFFF"
+  image: assets/images/splash/splash_logo.png
+
+  # dark mode properties
+  color_dark: "#FFFFFF"
+  image_dark: assets/images/splash/splash_logo.png
+
+  # Android 12 and above
+  android_12:
+    # Light mode properties
+    color: "#FFFFFF"
+    image: assets/images/splash/splash_logo.png
+
+    # dark mode properties
+    color_dark: "#FFFFFF"
+    image_dark: assets/images/splash/splash_logo.png
+
+  # Enable android & ios & web support
+  android: true
+  ios: true
+  web: false
+
+  # Hide the notification bar.
+  fullscreen: true
