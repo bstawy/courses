@@ -3,21 +3,21 @@ flutter_native_splash:
 
   # Light mode properties
   color: "#FFFFFF"
-  image: assets/images/splash/splash_logo.png
+  image: assets/images/splash_logo.png
 
   # dark mode properties
   color_dark: "#FFFFFF"
-  image_dark: assets/images/splash/splash_logo.png
+  image_dark: assets/images/splash_logo.png
 
   # Android 12 and above
   android_12:
     # Light mode properties
     color: "#FFFFFF"
-    image: assets/images/splash/splash_logo.png
+    image: assets/images/splash_logo.png
 
     # dark mode properties
     color_dark: "#FFFFFF"
-    image_dark: assets/images/splash/splash_logo.png
+    image_dark: assets/images/splash_logo.png
 
   # Enable android & ios & web support
   android: true
