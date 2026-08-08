@@ -1,6 +1,7 @@
 class AssetsManager {
   static const String logo = "assets/images/logo.svg";
 
+  // Bottom Navigation Bar
   static const String homeOutlinedIcon = "assets/icons/home_outlined_icon.png";
   static const String homeFilledIcon = "assets/icons/home_filled_icon.png";
   static const String jobsOutlinedIcon = "assets/icons/jobs_outlined_icon.png";
@@ -19,4 +20,8 @@ class AssetsManager {
       "assets/icons/messages_filled_icon.png";
 
   static const String loginIcon = "assets/icons/login_icon.svg";
+  static const String playIcon = "assets/icons/play_icon.svg";
+
+  // Home
+  static const String homeStatsImg = "assets/images/home_stats_img.png";
 }

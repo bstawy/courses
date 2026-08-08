@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../theme/typography/font_weight_helper.dart';
 import 'app_button_enums.dart';
 
 class AppButton extends StatelessWidget {
@@ -63,6 +62,24 @@ class AppButton extends StatelessWidget {
       ),
     };
 
+    final iconSize = switch (size) {
+      AppButtonSize.small => 10.r,
+      AppButtonSize.medium => 14.r,
+      AppButtonSize.large => 20.r,
+    };
+
+    final textStyle = switch (size) {
+      AppButtonSize.small => textTheme.labelSmall?.copyWith(
+        color: contentColor,
+      ),
+      AppButtonSize.medium => textTheme.labelMedium?.copyWith(
+        color: contentColor,
+      ),
+      AppButtonSize.large => textTheme.labelLarge?.copyWith(
+        color: contentColor,
+      ),
+    };
+
     void handleClick() {
       if (!loading && onClicked != null) {
         onClicked!();
@@ -84,8 +101,8 @@ class AppButton extends StatelessWidget {
       ),
       child: loading
           ? SizedBox(
-              height: 20.h,
-              width: 20.w,
+              height: iconSize,
+              width: iconSize,
               child: CircularProgressIndicator(
                 color: contentColor,
                 strokeWidth: 2,
@@ -95,15 +112,15 @@ class AppButton extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (prefixWidget != null) ...[prefixWidget!, Gap(8.w)],
-                Text(
-                  title,
-                  style: (textTheme.titleMedium)?.copyWith(
-                    color: contentColor,
-                    fontWeight: FontWeightHelper.bold,
-                    letterSpacing: 0.5,
+                if (prefixWidget != null) ...[
+                  SizedBox(
+                    height: iconSize,
+                    width: iconSize,
+                    child: prefixWidget!,
                   ),
-                ),
+                  Gap(8.w),
+                ],
+                Text(title, style: textStyle),
               ],
             ),
     );

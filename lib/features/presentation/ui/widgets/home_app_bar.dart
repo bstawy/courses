@@ -3,6 +3,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../core/extension/theme_ext.dart';
 import '../../../../core/helpers/assets_manager.dart';
 import '../../../../core/widgets/buttons/app_button.dart';
 import '../../../../core/widgets/buttons/app_button_enums.dart';
@@ -21,26 +22,21 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: SvgPicture.asset(AssetsManager.logo),
       actions: [
         AppButton(
+          onClicked: () {},
           title: "SIGN IN",
-          variant: AppButtonVariant.dark,
+          variant: .dark,
           prefixWidget: SvgPicture.asset(
             AssetsManager.loginIcon,
-            colorFilter: ColorFilter.mode(
-              Theme.of(context).colorScheme.onInverseSurface,
+            colorFilter: .mode(
+              context.colors.onInverseSurface,
               BlendMode.srcIn,
             ),
             height: 20.h,
             width: 20.w,
           ),
-
-          onClicked: () {},
         ),
         Gap(8.w),
-        AppIconButton(
-          icon: Icons.menu,
-          variant: AppIconButtonVariant.outlined,
-          onClicked: () {},
-        ),
+        AppIconButton(onClicked: () {}, icon: Icons.menu, variant: .outlined),
         Gap(16.w),
       ],
     );

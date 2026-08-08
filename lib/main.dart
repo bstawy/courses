@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           title: 'Courses',
           theme: AppTheme.lightThemeData,
           darkTheme: AppTheme.darkThemeData,
-          themeMode: ThemeMode.system,
+          themeMode: .system,
           home: child,
         );
       },
