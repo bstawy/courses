@@ -15,7 +15,8 @@ dependencies:
   get_it: ^9.2.1
   adaptive_platform_ui: ^0.1.111
   flutter_svg: ^2.3.0
-  flutter_svg_provider: ^1.0.7
+  flutter_screenutil_plus: ^1.6.0
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:

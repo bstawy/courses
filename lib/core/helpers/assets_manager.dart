@@ -1,4 +1,6 @@
 class AssetsManager {
+  static const String logo = "assets/images/logo.svg";
+
   static const String homeOutlinedIcon = "assets/icons/home_outlined_icon.png";
   static const String homeFilledIcon = "assets/icons/home_filled_icon.png";
   static const String jobsOutlinedIcon = "assets/icons/jobs_outlined_icon.png";
@@ -15,4 +17,6 @@ class AssetsManager {
       "assets/icons/messages_outlined_icon.png";
   static const String messagesFilledIcon =
       "assets/icons/messages_filled_icon.png";
+
+  static const String loginIcon = "assets/icons/login_icon.svg";
 }
