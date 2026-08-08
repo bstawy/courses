@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
 import 'core/theme/app_theme/app_theme.dart';
-import 'features/presentation/ui/home_screen.dart';
+import 'features/layout/ui/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const HomeScreen(),
+      child: const Layout(),
     );
   }
 }
