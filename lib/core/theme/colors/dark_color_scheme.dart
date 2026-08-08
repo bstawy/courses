@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
 
-class AppColorScheme extends ColorScheme {
-  const AppColorScheme()
+class DarkColorScheme extends ColorScheme {
+  const DarkColorScheme()
     : super(
         brightness: Brightness.dark,
         primary: AppColors.amber,
