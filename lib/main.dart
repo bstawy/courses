@@ -1,8 +1,8 @@
 import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:courses/core/theme/app_theme/app_theme.dart';
 
 import 'core/helpers/assets_manager.dart';
+import 'core/theme/app_theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());

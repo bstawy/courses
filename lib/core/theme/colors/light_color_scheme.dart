@@ -6,13 +6,17 @@ class LightColorScheme extends ColorScheme {
   const LightColorScheme()
     : super(
         brightness: Brightness.light,
-        primary: AppColors.amber,
-        onPrimary: AppColors.teal,
-        secondary: AppColors.sage,
-        onSecondary: AppColors.teal,
-        surface: AppColors.darkGrey,
-        onSurface: AppColors.white,
+        primary: AppColors.red,
+        onPrimary: AppColors.offWhite,
+        secondary: AppColors.offBlack,
+        onSecondary: AppColors.offWhite,
+        surface: AppColors.offWhite,
+        onSurface: AppColors.carbonBlack,
+        surfaceContainer: AppColors.brightGrey,
+        onSurfaceVariant: AppColors.carbonBlack,
+        inverseSurface: AppColors.carbonBlack,
+        onInverseSurface: AppColors.offWhite,
         error: AppColors.red,
-        onError: AppColors.white,
+        onError: AppColors.offWhite,
       );
 }
