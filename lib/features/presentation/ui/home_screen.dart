@@ -14,7 +14,13 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: .start,
-          children: [const HomeAppBar(), Gap(24.h), HomeHero()],
+          children: [
+            const HomeAppBar(),
+            Gap(24.h),
+            HomeHero(),
+            Gap(24.h),
+            HomeHero(),
+          ],
         ),
       ),
     );

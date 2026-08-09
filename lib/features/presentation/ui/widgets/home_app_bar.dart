@@ -6,7 +6,6 @@ import 'package:gap/gap.dart';
 import '../../../../core/extension/theme_ext.dart';
 import '../../../../core/helpers/assets_manager.dart';
 import '../../../../core/widgets/buttons/app_button.dart';
-import '../../../../core/widgets/buttons/app_button_enums.dart';
 import '../../../../core/widgets/buttons/app_icon_button.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -18,6 +17,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
+      forceMaterialTransparency: false,
+      surfaceTintColor: context.colors.surface,
       leadingWidth: 16.w,
       title: SvgPicture.asset(AssetsManager.logo),
       actions: [

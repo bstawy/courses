@@ -2,18 +2,42 @@ import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/helpers/assets_manager.dart';
+import '../../../core/theme/colors/app_colors.dart';
 import '../../presentation/ui/home_screen.dart';
 
-class Layout extends StatelessWidget {
+class Layout extends StatefulWidget {
   const Layout({super.key});
+
+  @override
+  State<Layout> createState() => _LayoutState();
+}
+
+class _LayoutState extends State<Layout> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
-      body: HomeScreen(),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: const [
+          HomeScreen(),
+          Center(child: Text('Jobs Screen')),
+          Center(child: Text('Galleria Screen')),
+          Center(child: Text('Courses Screen')),
+          Center(child: Text('Messages Screen')),
+        ],
+      ),
       bottomNavigationBar: AdaptiveBottomNavigationBar(
-        useNativeBottomBar: true,
-        selectedItemColor: Colors.red,
+        selectedItemColor: AppColors.brightGrey,
+        unselectedItemColor: AppColors.carbonBlack,
+
         items: [
           AdaptiveNavigationDestination(
             icon: AssetImage(AssetsManager.homeOutlinedIcon),
@@ -41,8 +65,8 @@ class Layout extends StatelessWidget {
             label: 'Messages',
           ),
         ],
-        selectedIndex: 0,
-        onTap: (index) {},
+        selectedIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }
