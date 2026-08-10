@@ -24,14 +24,16 @@ class AppTextStyles extends TextTheme {
           fontSize: 32.sp,
           fontWeight: FontWeightHelper.regular,
         ),
+        // done
         headlineMedium: TextStyle(
           fontSize: 22.sp,
           fontWeight: FontWeightHelper.extraBold,
           height: 1.0,
         ),
+        // done
         headlineSmall: TextStyle(
-          fontSize: 24.sp,
-          fontWeight: FontWeightHelper.regular,
+          fontSize: 16.sp,
+          fontWeight: FontWeightHelper.bold,
         ),
         titleLarge: TextStyle(
           fontSize: 22.sp,

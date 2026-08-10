@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
+import 'package:gap/gap.dart';
 
 import '../extension/theme_ext.dart';
 
 class CustomChip extends StatelessWidget {
   final String label;
+  final Widget? leading;
+  final Widget? trailing;
   final num? horizontalPadding;
   final num? verticalPadding;
   final Color? backgroundColor;
@@ -17,6 +20,8 @@ class CustomChip extends StatelessWidget {
   const CustomChip({
     super.key,
     required this.label,
+    this.leading,
+    this.trailing,
     this.horizontalPadding,
     this.verticalPadding,
     this.backgroundColor,
@@ -34,7 +39,16 @@ class CustomChip extends StatelessWidget {
       backgroundColor: context.colors.primary.withValues(alpha: 0.1),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.r)),
       side: BorderSide(color: Colors.transparent, width: 0.w),
-      label: Text(label),
+      label: (leading == null && trailing == null)
+          ? Text(label)
+          : (Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (leading != null) ...[leading!, Gap(8.w)],
+                Text(label),
+                if (trailing != null) ...[Gap(8.w), trailing!],
+              ],
+            )),
       labelStyle: context.textStyles.labelSmall?.copyWith(
         color: context.colors.primary,
       ),
