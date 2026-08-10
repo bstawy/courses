@@ -17,7 +17,7 @@ class HomeHero extends StatelessWidget {
             padding: .symmetric(horizontal: 22.w),
             child: Image.asset(AssetsManager.homeStatsImg, fit: .contain),
           ),
-          Positioned(bottom: 0, left: 0, right: 0, child: HomeHeroStatsCard()),
+          Positioned(bottom: 0, left: 0, right: 0, child: HomeHeroStatsCard(),),
         ],
       ),
     );

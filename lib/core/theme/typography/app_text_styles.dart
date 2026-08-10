@@ -24,8 +24,9 @@ class AppTextStyles extends TextTheme {
           fontWeight: FontWeightHelper.regular,
         ),
         headlineMedium: TextStyle(
-          fontSize: 28,
-          fontWeight: FontWeightHelper.regular,
+          fontSize: 22,
+          fontWeight: FontWeightHelper.extraBold,
+          height: 1.0,
         ),
         headlineSmall: TextStyle(
           fontSize: 24,
@@ -63,6 +64,9 @@ class AppTextStyles extends TextTheme {
           fontSize: 10,
           fontWeight: FontWeightHelper.extraBold,
         ),
-        labelSmall: TextStyle(fontSize: 10, fontWeight: FontWeightHelper.bold),
+        labelSmall: TextStyle(
+          fontSize: 8,
+          fontWeight: FontWeightHelper.semiBold,
+        ),
       );
 }

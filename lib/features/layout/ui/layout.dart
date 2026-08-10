@@ -1,43 +1,37 @@
+import 'dart:io';
+
 import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/helpers/assets_manager.dart';
 import '../../../core/theme/colors/app_colors.dart';
-import '../../presentation/ui/home_screen.dart';
 
-class Layout extends StatefulWidget {
-  const Layout({super.key});
+class Layout extends StatelessWidget {
+  final StatefulNavigationShell navigationShell;
 
-  @override
-  State<Layout> createState() => _LayoutState();
-}
-
-class _LayoutState extends State<Layout> {
-  int _selectedIndex = 0;
+  const Layout({super.key, required this.navigationShell});
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    navigationShell.goBranch(
+      index,
+      initialLocation: index == navigationShell.currentIndex,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveScaffold(
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: const [
-          HomeScreen(),
-          Center(child: Text('Jobs Screen')),
-          Center(child: Text('Galleria Screen')),
-          Center(child: Text('Courses Screen')),
-          Center(child: Text('Messages Screen')),
-        ],
-      ),
-      bottomNavigationBar: AdaptiveBottomNavigationBar(
-        selectedItemColor: AppColors.brightGrey,
-        unselectedItemColor: AppColors.carbonBlack,
+    final Color selectedItemColor = (Platform.isIOS)
+        ? AppColors.red
+        : AppColors.brightGrey;
 
+    return AdaptiveScaffold(
+      body: navigationShell,
+      bottomNavigationBar: AdaptiveBottomNavigationBar(
+        onTap: _onItemTapped,
+        selectedIndex: navigationShell.currentIndex,
+        selectedItemColor: selectedItemColor,
+        unselectedItemColor: AppColors.carbonBlack,
         items: [
           AdaptiveNavigationDestination(
             icon: AssetImage(AssetsManager.homeOutlinedIcon),
@@ -65,8 +59,6 @@ class _LayoutState extends State<Layout> {
             label: 'Messages',
           ),
         ],
-        selectedIndex: _selectedIndex,
-        onTap: _onItemTapped,
       ),
     );
   }

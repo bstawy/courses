@@ -20,6 +20,7 @@ class HomeScreen extends StatelessWidget {
             Gap(24.h),
             HomeHero(),
             HomeProfessionalHome(),
+            Gap(48.h),
           ],
         ),
       ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
+import 'core/routing/app_router.dart';
 import 'core/theme/app_theme/app_theme.dart';
-import 'features/layout/ui/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,16 +18,15 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           title: 'Courses',
           theme: AppTheme.lightThemeData,
           darkTheme: AppTheme.darkThemeData,
           themeMode: .system,
-          home: child,
+          routerConfig: AppRouter.router,
         );
       },
-      child: const Layout(),
     );
   }
 }
