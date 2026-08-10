@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import 'widgets/hero/home_hero.dart';
 import 'widgets/home_app_bar.dart';
-import 'widgets/professional_home/home_professional_home.dart';
+import 'widgets/services/home_services.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             const HomeAppBar(),
             Gap(24.h),
             HomeHero(),
-            HomeProfessionalHome(),
+            HomeServices(),
             Gap(48.h),
           ],
         ),

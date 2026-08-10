@@ -22,6 +22,14 @@ class AssetsManager {
   static const String loginIcon = "assets/icons/login_icon.svg";
   static const String playIcon = "assets/icons/play_icon.svg";
 
+  static const String shapeImg = "assets/images/shape.svg";
+
   // Home
   static const String homeStatsImg = "assets/images/home_stats_img.png";
+  static const String homeServicesImg01 =
+      "assets/images/home_services_img01.jpg";
+  static const String homeServicesImg02 =
+      "assets/images/home_services_img02.jpg";
+  static const String homeServicesImg03 =
+      "assets/images/home_services_img03.jpg";
 }
