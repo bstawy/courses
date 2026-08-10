@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../../core/extension/theme_ext.dart';
-import '../../../../../../core/widgets/colorful_text.dart';
-import '../../../../../../core/widgets/custom_chip.dart';
+import '../../../../../../../core/extension/theme_ext.dart';
+import '../../../../../../../core/widgets/colorful_text.dart';
+import '../../../../../../../core/widgets/custom_chip.dart';
 
 class HomeServicesHeading extends StatelessWidget {
   const HomeServicesHeading({super.key});

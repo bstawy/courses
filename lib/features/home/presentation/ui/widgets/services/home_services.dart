@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/widgets/marquee.dart';
+import '../../../../../../core/widgets/marquee.dart';
 import 'widgets/home_services_heading.dart';
 import 'widgets/home_services_list.dart';
 

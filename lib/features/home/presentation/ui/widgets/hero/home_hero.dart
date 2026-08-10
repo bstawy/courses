@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
-import '../../../../../core/helpers/assets_manager.dart';
+import '../../../../../../core/helpers/assets_manager.dart';
 import 'widgets/home_hero_stats_card.dart';
 
 class HomeHero extends StatelessWidget {
