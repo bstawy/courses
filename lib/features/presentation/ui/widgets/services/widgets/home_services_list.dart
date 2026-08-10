@@ -13,7 +13,7 @@ class HomeServicesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: .symmetric(horizontal: 16.w, vertical: 32.h),
+      padding: .symmetric(horizontal: 16.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

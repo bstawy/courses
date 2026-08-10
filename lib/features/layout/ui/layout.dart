@@ -26,6 +26,8 @@ class Layout extends StatelessWidget {
         : AppColors.brightGrey;
 
     return AdaptiveScaffold(
+      enableBlur: true,
+      minimizeBehavior: TabBarMinimizeBehavior.never,
       body: navigationShell,
       bottomNavigationBar: AdaptiveBottomNavigationBar(
         onTap: _onItemTapped,

@@ -21,6 +21,7 @@ class AssetsManager {
 
   static const String loginIcon = "assets/icons/login_icon.svg";
   static const String playIcon = "assets/icons/play_icon.svg";
+  static const String arrowIcon = "assets/icons/arrow_icon.svg";
 
   static const String shapeImg = "assets/images/shape.svg";
 

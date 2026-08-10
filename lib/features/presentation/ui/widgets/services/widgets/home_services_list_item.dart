@@ -51,7 +51,12 @@ class HomeServicesListItem extends StatelessWidget {
               Gap(10.h),
               Text(description, style: context.textStyles.bodyMedium),
               Gap(10.h),
-              AppButton(onClicked: onButtonPressed, title: buttonText),
+              AppButton(
+                onClicked: onButtonPressed,
+                title: buttonText,
+                icon: SvgPicture.asset(AssetsManager.arrowIcon),
+                iconPosition: 'right',
+              ),
             ],
           ),
         ),

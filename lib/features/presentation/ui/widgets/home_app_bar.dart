@@ -27,7 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           onClicked: () {},
           title: "SIGN IN",
           variant: .dark,
-          prefixWidget: SvgPicture.asset(
+          icon: SvgPicture.asset(
             AssetsManager.loginIcon,
             colorFilter: .mode(
               context.colors.onInverseSurface,

@@ -21,7 +21,7 @@ class HomeHeroActions extends StatelessWidget {
         Gap(8.h),
         AppButton(
           title: "See How It Works".toUpperCase(),
-          prefixWidget: SvgPicture.asset(AssetsManager.playIcon),
+          icon: SvgPicture.asset(AssetsManager.playIcon),
           variant: .outlined,
         ),
       ],

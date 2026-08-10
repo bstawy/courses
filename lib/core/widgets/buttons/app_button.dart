@@ -10,7 +10,8 @@ class AppButton extends StatelessWidget {
   final AppButtonSize size;
   final VoidCallback? onClicked;
   final bool loading;
-  final Widget? prefixWidget;
+  final Widget? icon;
+  final String? iconPosition;
   final double? width;
   final double? height;
 
@@ -21,7 +22,8 @@ class AppButton extends StatelessWidget {
     this.size = AppButtonSize.medium,
     this.onClicked,
     this.loading = false,
-    this.prefixWidget,
+    this.icon,
+    this.iconPosition,
     this.width,
     this.height,
   });
@@ -62,12 +64,6 @@ class AppButton extends StatelessWidget {
       ),
     };
 
-    final iconSize = switch (size) {
-      AppButtonSize.small => 10.r,
-      AppButtonSize.medium => 14.r,
-      AppButtonSize.large => 20.r,
-    };
-
     final textStyle = switch (size) {
       AppButtonSize.small => textTheme.labelSmall?.copyWith(
         color: contentColor,
@@ -79,6 +75,14 @@ class AppButton extends StatelessWidget {
         color: contentColor,
       ),
     };
+
+    final iconSize = switch (size) {
+      AppButtonSize.small => 10.r,
+      AppButtonSize.medium => 14.r,
+      AppButtonSize.large => 20.r,
+    };
+
+    final iconPosition = this.iconPosition ?? 'left';
 
     void handleClick() {
       if (!loading && onClicked != null) {
@@ -111,16 +115,17 @@ class AppButton extends StatelessWidget {
           : Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                if (prefixWidget != null) ...[
-                  SizedBox(
-                    height: iconSize,
-                    width: iconSize,
-                    child: prefixWidget!,
-                  ),
+                if (icon != null && iconPosition == 'left') ...[
+                  SizedBox(height: iconSize, width: iconSize, child: icon!),
                   Gap(8.w),
                 ],
                 Text(title, style: textStyle),
+                if (icon != null && iconPosition == 'right') ...[
+                  Gap(8.w),
+                  SizedBox(height: iconSize, width: iconSize, child: icon!),
+                ],
               ],
             ),
     );
