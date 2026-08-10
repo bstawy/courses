@@ -33,4 +33,5 @@ class AssetsManager {
       "assets/images/home_services_img02.jpg";
   static const String homeServicesImg03 =
       "assets/images/home_services_img03.jpg";
+  static const String homeInsightsImg = "assets/images/home_insights_img.png";
 }
