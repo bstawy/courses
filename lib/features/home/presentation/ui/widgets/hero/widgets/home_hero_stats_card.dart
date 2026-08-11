@@ -23,7 +23,7 @@ class HomeHeroStatsCard extends StatelessWidget {
           Gap(16.h),
           Text(
             "The only professional platform where you learn from the best, gain real-world tools, and get connected to clients looking for an architect, all in one place.",
-            style: context.textStyles.bodyLarge,
+            style: context.textStyles.bodyMedium,
             textAlign: .center,
           ),
           Gap(16.h),

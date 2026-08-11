@@ -35,7 +35,7 @@ class HomeServicesHeading extends StatelessWidget {
             width: 0.85.sw,
             child: Text(
               "School ends the day you get your diploma. Your career starts long before that. At Linktura you don't just watch lessons — you gain real tools, connect with leading mentors, and build a professional presence that gets you hired.",
-              style: context.textStyles.bodyLarge,
+              style: context.textStyles.bodyMedium,
               textAlign: .center,
             ),
           ),

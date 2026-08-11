@@ -51,14 +51,15 @@ class AppTextStyles extends TextTheme {
         ),
         // done
         bodyLarge: TextStyle(
-          fontSize: 10.sp,
-          fontWeight: FontWeightHelper.semiBold,
+          fontSize: 12.sp,
+          fontWeight: FontWeightHelper.bold,
           height: 1.2,
         ),
         // done
         bodyMedium: TextStyle(
           fontSize: 10.sp,
           fontWeight: FontWeightHelper.semiBold,
+          height: 1.2,
         ),
         // done
         bodySmall: TextStyle(fontSize: 8.sp, fontWeight: FontWeightHelper.bold),

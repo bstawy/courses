@@ -6,6 +6,7 @@ import 'widgets/coming_soon/home_coming_soon.dart';
 import 'widgets/hero/home_hero.dart';
 import 'widgets/home_app_bar.dart';
 import 'widgets/insights/home_insights.dart';
+import 'widgets/pricing/home_pricing.dart';
 import 'widgets/services/home_services.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -27,6 +28,8 @@ class HomeScreen extends StatelessWidget {
             HomeInsights(),
             Gap(48.h),
             HomeComingSoon(),
+            Gap(48.h),
+            HomePricing(),
             Gap(48.h),
             // Extra space at the bottom of the screen to avoid content being cut off by the navigation bar
             Gap(48.h),

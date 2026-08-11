@@ -14,6 +14,10 @@ class AppButton extends StatelessWidget {
   final String? iconPosition;
   final double? width;
   final double? height;
+  final double? horizontalPadding;
+  final double? verticalPadding;
+  final double? fontSize;
+  final FontWeight? fontWeight;
 
   const AppButton({
     super.key,
@@ -26,6 +30,10 @@ class AppButton extends StatelessWidget {
     this.iconPosition,
     this.width,
     this.height,
+    this.horizontalPadding,
+    this.verticalPadding,
+    this.fontSize,
+    this.fontWeight,
   });
 
   @override
@@ -51,28 +59,34 @@ class AppButton extends StatelessWidget {
 
     final padding = switch (size) {
       AppButtonSize.small => EdgeInsets.symmetric(
-        horizontal: 12.w,
-        vertical: 8.h,
+        horizontal: horizontalPadding ?? 12.w,
+        vertical: verticalPadding ?? 8.h,
       ),
       AppButtonSize.medium => EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 10.h,
+        horizontal: horizontalPadding ?? 16.w,
+        vertical: verticalPadding ?? 10.h,
       ),
       AppButtonSize.large => EdgeInsets.symmetric(
-        horizontal: 20.w,
-        vertical: 12.h,
+        horizontal: horizontalPadding ?? 20.w,
+        vertical: verticalPadding ?? 12.h,
       ),
     };
 
     final textStyle = switch (size) {
       AppButtonSize.small => textTheme.labelSmall?.copyWith(
         color: contentColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
       ),
       AppButtonSize.medium => textTheme.labelMedium?.copyWith(
         color: contentColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
       ),
       AppButtonSize.large => textTheme.labelLarge?.copyWith(
         color: contentColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
       ),
     };
 
