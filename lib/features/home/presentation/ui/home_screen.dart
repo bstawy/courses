@@ -7,6 +7,7 @@ import 'widgets/faqs/home_faqs.dart';
 import 'widgets/hero/home_hero.dart';
 import 'widgets/home_app_bar.dart';
 import 'widgets/insights/home_insights.dart';
+import 'widgets/next_step/home_next_step.dart';
 import 'widgets/pricing/home_pricing.dart';
 import 'widgets/services/home_services.dart';
 
@@ -34,8 +35,8 @@ class HomeScreen extends StatelessWidget {
             Gap(48.h),
             HomeFaqs(),
             Gap(48.h),
-            // Extra space at the bottom of the screen to avoid content being cut off by the navigation bar
-            Gap(48.h),
+            HomeNextStep(),
+            Gap(96.h),
           ],
         ),
       ),
