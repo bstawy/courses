@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../core/helpers/assets_manager.dart';
-import '../../../../../../../core/widgets/custom_card.dart';
+import '../../../../../../../core/widgets/app_card.dart';
 import 'home_coming_soon_features_card_body.dart';
 
 class HomeComingSoonFeatureThree extends StatelessWidget {
@@ -15,7 +15,7 @@ class HomeComingSoonFeatureThree extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomCard(
+        AppCard(
           horizontalPadding: 20.w,
           verticalPadding: 20.h,
           backgroundColor: context.colors.secondary,

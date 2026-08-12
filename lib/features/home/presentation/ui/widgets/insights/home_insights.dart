@@ -3,7 +3,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/helpers/assets_manager.dart';
-import '../../../../../../core/widgets/custom_chip.dart';
+import '../../../../../../core/widgets/app_chip.dart';
 import 'widgets/home_insights_description.dart';
 import 'widgets/home_insights_heading.dart';
 
@@ -17,7 +17,7 @@ class HomeInsights extends StatelessWidget {
       child: Column(
         crossAxisAlignment: .start,
         children: [
-          CustomChip(label: "SPONSORED INSIGHTS · FREE FOR EVERYONE"),
+          AppChip(label: "SPONSORED INSIGHTS · FREE FOR EVERYONE"),
           Gap(16.h),
           HomeInsightsHeading(),
           Gap(16.h),

@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../core/widgets/colorful_text.dart';
-import '../../../../../../../core/widgets/custom_chip.dart';
+import '../../../../../../../core/widgets/app_chip.dart';
 
 class HomePricingHeading extends StatelessWidget {
   const HomePricingHeading({super.key});
@@ -14,7 +14,7 @@ class HomePricingHeading extends StatelessWidget {
     return Column(
       crossAxisAlignment: .center,
       children: [
-        CustomChip(label: "Pricing"),
+        AppChip(label: "Pricing"),
         Gap(10.h),
         SizedBox(
           width: 0.8.sw,

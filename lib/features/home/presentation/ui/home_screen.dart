@@ -3,6 +3,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import 'widgets/coming_soon/home_coming_soon.dart';
+import 'widgets/faqs/home_faqs.dart';
 import 'widgets/hero/home_hero.dart';
 import 'widgets/home_app_bar.dart';
 import 'widgets/insights/home_insights.dart';
@@ -30,6 +31,8 @@ class HomeScreen extends StatelessWidget {
             HomeComingSoon(),
             Gap(48.h),
             HomePricing(),
+            Gap(48.h),
+            HomeFaqs(),
             Gap(48.h),
             // Extra space at the bottom of the screen to avoid content being cut off by the navigation bar
             Gap(48.h),

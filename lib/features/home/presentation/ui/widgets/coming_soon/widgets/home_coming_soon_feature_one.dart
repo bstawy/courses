@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../core/helpers/assets_manager.dart';
-import '../../../../../../../core/widgets/custom_card.dart';
+import '../../../../../../../core/widgets/app_card.dart';
 import 'home_coming_soon_features_card_body.dart';
 
 class HomeComingSoonFeatureOne extends StatelessWidget {
@@ -17,7 +17,7 @@ class HomeComingSoonFeatureOne extends StatelessWidget {
       children: [
         Image.asset(AssetsManager.homeComingSoonImg01),
         Gap(8.h),
-        CustomCard(
+        AppCard(
           horizontalPadding: 20.w,
           verticalPadding: 20.h,
           backgroundColor: context.colors.secondary,

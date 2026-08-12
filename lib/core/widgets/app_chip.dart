@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../extension/theme_ext.dart';
 
-class CustomChip extends StatelessWidget {
+class AppChip extends StatelessWidget {
   final String label;
   final Widget? leading;
   final Widget? trailing;
@@ -17,7 +17,7 @@ class CustomChip extends StatelessWidget {
   final TextStyle? labelStyle;
   final Color? labelColor;
 
-  const CustomChip({
+  const AppChip({
     super.key,
     required this.label,
     this.leading,

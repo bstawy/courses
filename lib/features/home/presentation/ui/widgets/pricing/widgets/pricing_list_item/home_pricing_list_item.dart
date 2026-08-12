@@ -4,9 +4,9 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../../core/theme/typography/font_weight_helper.dart';
+import '../../../../../../../../core/widgets/app_card.dart';
 import '../../../../../../../../core/widgets/buttons/app_button.dart';
 import '../../../../../../../../core/widgets/colorful_text.dart';
-import '../../../../../../../../core/widgets/custom_card.dart';
 import 'home_pricing_list_item_benefits_item.dart';
 
 class HomePricingListItem extends StatelessWidget {
@@ -29,7 +29,7 @@ class HomePricingListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard(
+    return AppCard(
       horizontalPadding: 24.w,
       verticalPadding: 24.h,
       backgroundColor: variant == "dark"
@@ -84,7 +84,7 @@ class HomePricingListItem extends StatelessWidget {
               ),
             ),
           Gap(24.h),
-          CustomCard(
+          AppCard(
             horizontalPadding: 12.w,
             verticalPadding: 4.h,
             borderRadius: 16.r,

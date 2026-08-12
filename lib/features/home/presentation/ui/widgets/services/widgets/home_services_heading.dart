@@ -3,8 +3,8 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
+import '../../../../../../../core/widgets/app_chip.dart';
 import '../../../../../../../core/widgets/colorful_text.dart';
-import '../../../../../../../core/widgets/custom_chip.dart';
 
 class HomeServicesHeading extends StatelessWidget {
   const HomeServicesHeading({super.key});
@@ -15,7 +15,7 @@ class HomeServicesHeading extends StatelessWidget {
       padding: .symmetric(horizontal: 24.w),
       child: Column(
         children: [
-          CustomChip(label: 'THE PROFESSIONAL HOME'),
+          AppChip(label: 'THE PROFESSIONAL HOME'),
           Gap(4.h),
           SizedBox(
             width: 0.8.sw,

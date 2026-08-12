@@ -3,7 +3,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
-import '../../../../../../../core/widgets/custom_card.dart';
+import '../../../../../../../core/widgets/app_card.dart';
 import 'home_hero_actions.dart';
 import 'home_hero_stats_card_title.dart';
 
@@ -12,7 +12,7 @@ class HomeHeroStatsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard(
+    return AppCard(
       horizontalMargin: 16.w,
       horizontalPadding: 24.w,
       verticalPadding: 32.h,

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import '../extension/theme_ext.dart';
 import '../theme/colors/app_colors.dart';
 
-class CustomCard extends StatelessWidget {
+class AppCard extends StatelessWidget {
   final double? horizontalMargin;
   final double? verticalMargin;
   final double? horizontalPadding;
@@ -15,7 +15,7 @@ class CustomCard extends StatelessWidget {
   final double? borderWidth;
   final Widget? child;
 
-  const CustomCard({
+  const AppCard({
     super.key,
     this.horizontalMargin,
     this.verticalMargin,

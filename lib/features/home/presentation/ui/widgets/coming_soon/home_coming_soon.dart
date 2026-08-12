@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../core/widgets/buttons/app_button.dart';
-import '../../../../../../core/widgets/custom_card.dart';
+import '../../../../../../core/widgets/app_card.dart';
 import 'widgets/home_coming_soon_features.dart';
 import 'widgets/home_coming_soon_heading.dart';
 
@@ -13,7 +13,7 @@ class HomeComingSoon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard(
+    return AppCard(
       horizontalMargin: 16.w,
       horizontalPadding: 16.w,
       verticalPadding: 24.h,

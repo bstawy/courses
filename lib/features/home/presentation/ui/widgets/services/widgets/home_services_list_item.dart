@@ -5,9 +5,9 @@ import 'package:gap/gap.dart';
 
 import '../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../core/helpers/assets_manager.dart';
+import '../../../../../../../core/widgets/app_card.dart';
 import '../../../../../../../core/widgets/buttons/app_button.dart';
 import '../../../../../../../core/widgets/colorful_text.dart';
-import '../../../../../../../core/widgets/custom_card.dart';
 
 class HomeServicesListItem extends StatelessWidget {
   final String imagePath;
@@ -31,7 +31,7 @@ class HomeServicesListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        CustomCard(
+        AppCard(
           horizontalPadding: 20.h,
           verticalPadding: 20.h,
           child: Column(
