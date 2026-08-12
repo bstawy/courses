@@ -6,12 +6,13 @@ import '../extension/theme_ext.dart';
 class AppExpansionTile extends StatefulWidget {
   final String title;
   final String? subtitle;
-  final List<String>? children;
+  final Widget? child;
   final Widget? leading;
   final Widget? trailing;
+  final Widget? collapsedIcon;
+  final Widget? expandedIcon;
   final TextStyle? titleTextStyle;
   final TextStyle? subtitleTextStyle;
-  final TextStyle? childTextStyle;
   final Color? backgroundColor;
   final Color? collapsedBackgroundColor;
   final Color? iconColor;
@@ -20,18 +21,20 @@ class AppExpansionTile extends StatefulWidget {
   final EdgeInsetsGeometry? childrenPadding;
   final ShapeBorder? shape;
   final ShapeBorder? collapsedShape;
+  final double? borderRadius;
   final bool? initiallyExpanded;
 
   const AppExpansionTile({
     super.key,
     required this.title,
-    this.children,
+    this.child,
     this.subtitle,
     this.leading,
     this.trailing,
+    this.collapsedIcon,
+    this.expandedIcon,
     this.titleTextStyle,
     this.subtitleTextStyle,
-    this.childTextStyle,
     this.backgroundColor,
     this.collapsedBackgroundColor,
     this.iconColor,
@@ -40,6 +43,7 @@ class AppExpansionTile extends StatefulWidget {
     this.childrenPadding,
     this.shape,
     this.collapsedShape,
+    this.borderRadius,
     this.initiallyExpanded,
   });
 
@@ -48,7 +52,13 @@ class AppExpansionTile extends StatefulWidget {
 }
 
 class _AppExpansionTileState extends State<AppExpansionTile> {
-  IconData _icon = Icons.add_circle;
+  Widget? _icon;
+
+  @override
+  initState() {
+    super.initState();
+    _icon = widget.collapsedIcon;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,16 +80,21 @@ class _AppExpansionTileState extends State<AppExpansionTile> {
             )
           : null,
       leading: widget.leading,
-      trailing: widget.trailing ?? Icon(_icon, size: 16.0.r),
+      trailing: widget.trailing ?? _icon,
       backgroundColor:
           widget.backgroundColor ?? context.colors.surfaceContainer,
       collapsedBackgroundColor:
           widget.collapsedBackgroundColor ?? context.colors.surfaceContainer,
       shape:
-          widget.shape ?? RoundedRectangleBorder(borderRadius: .circular(12.r)),
+          widget.shape ??
+          RoundedRectangleBorder(
+            borderRadius: .circular(widget.borderRadius ?? 12.r),
+          ),
       collapsedShape:
           widget.collapsedShape ??
-          RoundedRectangleBorder(borderRadius: .circular(12.r)),
+          RoundedRectangleBorder(
+            borderRadius: .circular(widget.borderRadius ?? 12.r),
+          ),
       iconColor: widget.iconColor ?? context.colors.onSurfaceVariant,
       collapsedIconColor:
           widget.collapsedIconColor ?? context.colors.onSurfaceVariant,
@@ -87,30 +102,21 @@ class _AppExpansionTileState extends State<AppExpansionTile> {
       initiallyExpanded: widget.initiallyExpanded ?? false,
       visualDensity: VisualDensity.compact,
       onExpansionChanged: (bool expanded) {
+        if (widget.collapsedIcon == null || widget.expandedIcon == null) {
+          return;
+        }
+        
         if (expanded) {
           setState(() {
-            _icon = Icons.remove_circle;
+            _icon = widget.expandedIcon;
           });
         } else {
           setState(() {
-            _icon = Icons.add_circle;
+            _icon = widget.collapsedIcon;
           });
         }
       },
-      children: widget.children != null
-          ? widget.children!
-                .map(
-                  (child) => Text(
-                    child,
-                    style:
-                        widget.childTextStyle ??
-                        context.textStyles.bodyLarge?.copyWith(
-                          color: context.colors.onSurfaceVariant.withAlpha(80),
-                        ),
-                  ),
-                )
-                .toList()
-          : [],
+      children: widget.child != null ? [widget.child!] : [],
     );
   }
 }

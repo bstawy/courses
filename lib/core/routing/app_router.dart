@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/presentation/ui/home_screen.dart';
+import '../../features/jobs/jobs_screen.dart';
 import '../../features/layout/ui/layout.dart';
 
 class AppRouter {
@@ -36,10 +37,7 @@ class AppRouter {
           StatefulShellBranch(
             navigatorKey: _jobsTabKey,
             routes: [
-              GoRoute(
-                path: '/jobs',
-                builder: (context, state) => Center(child: Text('Jobs Screen')),
-              ),
+              GoRoute(path: '/jobs', builder: (context, state) => JobsScreen()),
             ],
           ),
           StatefulShellBranch(

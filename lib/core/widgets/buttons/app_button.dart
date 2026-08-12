@@ -5,7 +5,7 @@ import 'package:gap/gap.dart';
 import 'app_button_enums.dart';
 
 class AppButton extends StatelessWidget {
-  final String title;
+  final String? title;
   final AppButtonVariant variant;
   final AppButtonSize size;
   final VoidCallback? onClicked;
@@ -17,11 +17,13 @@ class AppButton extends StatelessWidget {
   final double? horizontalPadding;
   final double? verticalPadding;
   final double? fontSize;
+  final double? iconSize;
   final FontWeight? fontWeight;
+  final Widget? child;
 
   const AppButton({
     super.key,
-    required this.title,
+    this.title,
     this.variant = AppButtonVariant.primary,
     this.size = AppButtonSize.medium,
     this.onClicked,
@@ -33,7 +35,9 @@ class AppButton extends StatelessWidget {
     this.horizontalPadding,
     this.verticalPadding,
     this.fontSize,
+    this.iconSize,
     this.fontWeight,
+    this.child,
   });
 
   @override
@@ -91,9 +95,9 @@ class AppButton extends StatelessWidget {
     };
 
     final iconSize = switch (size) {
-      AppButtonSize.small => 10.r,
-      AppButtonSize.medium => 14.r,
-      AppButtonSize.large => 20.r,
+      AppButtonSize.small => this.iconSize ?? 10.r,
+      AppButtonSize.medium => this.iconSize ?? 14.r,
+      AppButtonSize.large => this.iconSize ?? 20.r,
     };
 
     final iconPosition = this.iconPosition ?? 'left';
@@ -126,22 +130,23 @@ class AppButton extends StatelessWidget {
                 strokeWidth: 2,
               ),
             )
-          : Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                if (icon != null && iconPosition == 'left') ...[
-                  SizedBox(height: iconSize, width: iconSize, child: icon!),
-                  Gap(8.w),
-                ],
-                Text(title, style: textStyle),
-                if (icon != null && iconPosition == 'right') ...[
-                  Gap(8.w),
-                  SizedBox(height: iconSize, width: iconSize, child: icon!),
-                ],
-              ],
-            ),
+          : child ??
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    if (icon != null && iconPosition == 'left') ...[
+                      SizedBox(height: iconSize, width: iconSize, child: icon!),
+                      Gap(8.w),
+                    ],
+                    Text(title ?? "", style: textStyle),
+                    if (icon != null && iconPosition == 'right') ...[
+                      Gap(8.w),
+                      SizedBox(height: iconSize, width: iconSize, child: icon!),
+                    ],
+                  ],
+                ),
     );
   }
 }

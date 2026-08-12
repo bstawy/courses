@@ -41,4 +41,7 @@ class AssetsManager {
   static const String homeComingSoonImg03 =
       "assets/images/home_coming_soon_img03.png";
   static const String homeNextStepImg = "assets/images/home_next_step_img.png";
+
+  // Jobs
+  static const String jobsHeroImg = "assets/images/jobs_hero_img.png";
 }

@@ -26,7 +26,7 @@ class HomePricingListItemBenefitItem extends StatelessWidget {
           bottom: showBorderBottom
               ? BorderSide(
                   color: variant == 'dark'
-                      ? Colors.white.withOpacity(0.05)
+                      ? Colors.white.withValues(alpha: 0.5)
                       : AppColors.transparentBlack,
                   width: 1.0,
                 )

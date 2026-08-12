@@ -1,3 +1,4 @@
+import 'package:courses/features/home/presentation/ui/widgets/faqs/home_faqs_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
@@ -31,40 +32,36 @@ class HomeFaqs extends StatelessWidget {
             textAlign: .start,
           ),
           Gap(24.h),
-          AppExpansionTile(
+          HomeFaqsItem(
             title:
                 "Why pay, when there are free videos on YouTube and Telegram?",
-            children: [
-              "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
-            ],
+            content:
+                "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
           ),
+
           Gap(6.h),
-          AppExpansionTile(
+          HomeFaqsItem(
             title: "What's included in the Personal Plan?",
-            children: [
-              "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
-            ],
+            content:
+                "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
           ),
           Gap(6.h),
-          AppExpansionTile(
+          HomeFaqsItem(
             title: "How does Linktura actually bring me clients?",
-            children: [
-              "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
-            ],
+            content:
+                "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
           ),
           Gap(6.h),
-          AppExpansionTile(
+          HomeFaqsItem(
             title: "Is the content for beginners or experienced architects?",
-            children: [
-              "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
-            ],
+            content:
+                "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
           ),
           Gap(6.h),
-          AppExpansionTile(
+          HomeFaqsItem(
             title: "Is the content in Hebrew or Arabic?",
-            children: [
-              "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
-            ],
+            content:
+                "It's launching soon: clients searching for an architect or designer browse a project gallery and reach out to you directly — no commission taken. Personal Plan members get first access the day it goes live.",
           ),
         ],
       ),
