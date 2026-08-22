@@ -8,7 +8,10 @@ class Success<T> extends ApiResult<T> {
   Success(this.data);
 
   @override
-  R fold<R>(R Function(T data) onSuccess, R Function(String failure) onFailure) {
+  R fold<R>(
+    R Function(T data) onSuccess,
+    R Function(String failure) onFailure,
+  ) {
     return onSuccess(data);
   }
 }
@@ -19,7 +22,10 @@ class Failure<T> extends ApiResult<T> {
   Failure(this.failure);
 
   @override
-  R fold<R>(R Function(T data) onSuccess, R Function(String failure) onFailure) {
+  R fold<R>(
+    R Function(T data) onSuccess,
+    R Function(String failure) onFailure,
+  ) {
     return onFailure(failure);
   }
 }

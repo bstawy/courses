@@ -105,7 +105,7 @@ class _AppExpansionTileState extends State<AppExpansionTile> {
         if (widget.collapsedIcon == null || widget.expandedIcon == null) {
           return;
         }
-        
+
         if (expanded) {
           setState(() {
             _icon = widget.expandedIcon;
