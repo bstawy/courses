@@ -3,10 +3,10 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/extension/theme_ext.dart';
-import 'project_card/jobs_project_card.dart';
+import 'project_card/hiring_project_card.dart';
 
-class JobsProjects extends StatelessWidget {
-  const JobsProjects({super.key});
+class HiringProjects extends StatelessWidget {
+  const HiringProjects({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class JobsProjects extends StatelessWidget {
       children: [
         Text("Recent Projects", style: context.textStyles.titleMedium),
         Gap(12.h),
-        JobsProjectCard(
+        HiringProjectCard(
           tags: ["3D Designer", "Interior Design"],
           timeAgo: "47 Min ago",
           title:
@@ -27,7 +27,7 @@ class JobsProjects extends StatelessWidget {
           onApplyNow: () {},
         ),
         Gap(10.h),
-        JobsProjectCard(
+        HiringProjectCard(
           tags: ["3D Designer", "Interior Design"],
           timeAgo: "47 Min ago",
           title:

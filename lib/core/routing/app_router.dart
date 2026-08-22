@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/hiring/presentation/logic/hiring_category_cubit/hiring_category_cubit.dart';
+import '../../features/hiring/presentation/logic/hiring_country_cubit/hiring_country_cubit.dart';
+import '../../features/hiring/presentation/ui/hiring_screen.dart';
 import '../../features/home/presentation/ui/home_screen.dart';
-import '../../features/jobs/presentation/ui/jobs_screen.dart';
 import '../../features/layout/ui/layout.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   static final GlobalKey<NavigatorState> _rootNavigatorKey =
@@ -37,7 +41,20 @@ class AppRouter {
           StatefulShellBranch(
             navigatorKey: _jobsTabKey,
             routes: [
-              GoRoute(path: '/jobs', builder: (context, state) => JobsScreen()),
+              GoRoute(
+                path: '/jobs',
+                builder: (context, state) => MultiBlocProvider(
+                  providers: [
+                    BlocProvider(
+                      create: (context) => getIt<HiringCategoryCubit>(),
+                    ),
+                    BlocProvider(
+                      create: (context) => getIt<HiringCountryCubit>(),
+                    ),
+                  ],
+                  child: HiringScreen(),
+                ),
+              ),
             ],
           ),
           StatefulShellBranch(

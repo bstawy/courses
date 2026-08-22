@@ -7,10 +7,10 @@ import '../../../../../../../core/theme/colors/app_colors.dart';
 import '../../../../../../../core/theme/typography/font_weight_helper.dart';
 import '../../../../../../../core/widgets/app_card.dart';
 import '../../../../../../../core/widgets/buttons/app_button.dart';
-import 'jobs_project_card_clipper.dart';
-import 'jobs_project_card_tags.dart';
+import 'hiring_project_card_clipper.dart';
+import 'hiring_project_card_tags.dart';
 
-class JobsProjectCard extends StatelessWidget {
+class HiringProjectCard extends StatelessWidget {
   final List<String> tags;
   final String timeAgo;
   final String title;
@@ -19,7 +19,7 @@ class JobsProjectCard extends StatelessWidget {
   final VoidCallback onViewDetails;
   final VoidCallback onApplyNow;
 
-  const JobsProjectCard({
+  const HiringProjectCard({
     super.key,
     required this.tags,
     required this.timeAgo,
@@ -36,7 +36,7 @@ class JobsProjectCard extends StatelessWidget {
       alignment: Alignment.bottomLeft,
       children: [
         ClipPath(
-          clipper: JobsProjectCardClipper(),
+          clipper: HiringProjectCardClipper(),
           child: AppCard(
             horizontalPadding: 14.w,
             verticalPadding: 14.h,
@@ -45,7 +45,7 @@ class JobsProjectCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                JobsProjectCardTags(tags: tags, timeAgo: timeAgo),
+                HiringProjectCardTags(tags: tags, timeAgo: timeAgo),
                 Gap(8.h),
                 Text(title, style: context.textStyles.titleSmall),
                 Gap(12.h),

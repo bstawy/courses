@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class JobsProjectCardClipper extends CustomClipper<Path> {
+class HiringProjectCardClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     const double radius = 26;

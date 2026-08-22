@@ -4,11 +4,11 @@ import 'package:gap/gap.dart';
 
 import '../../../../core/helpers/assets_manager.dart';
 import '../../../home/presentation/ui/widgets/home_app_bar.dart';
-import 'widgets/categories_and_location/jobs_categories_and_location.dart';
-import 'widgets/projects/jobs_projects.dart';
+import 'widgets/categories_and_location/hiring_categories_and_location.dart';
+import 'widgets/projects/hiring_projects.dart';
 
-class JobsScreen extends StatelessWidget {
-  const JobsScreen({super.key});
+class HiringScreen extends StatelessWidget {
+  const HiringScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,11 @@ class JobsScreen extends StatelessWidget {
               padding: .symmetric(horizontal: 16.w),
               child: Column(
                 children: [
-                  Image.asset(AssetsManager.jobsHeroImg),
+                  Image.asset(AssetsManager.hiringHeroImg),
                   Gap(8.h),
-                  JobsCategoriesAndLocation(),
+                  HiringCategoriesAndLocation(),
                   Gap(24.h),
-                  JobsProjects(),
+                  HiringProjects(),
                 ],
               ),
             ),

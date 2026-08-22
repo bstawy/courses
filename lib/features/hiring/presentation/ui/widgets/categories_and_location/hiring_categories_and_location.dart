@@ -5,11 +5,11 @@ import 'package:gap/gap.dart';
 import '../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../core/widgets/app_card.dart';
 import '../../../../../../core/widgets/buttons/app_button.dart';
-import 'jobs_categories.dart';
-import 'jobs_locations.dart';
+import 'hiring_categories.dart';
+import 'hiring_locations.dart';
 
-class JobsCategoriesAndLocation extends StatelessWidget {
-  const JobsCategoriesAndLocation({super.key});
+class HiringCategoriesAndLocation extends StatelessWidget {
+  const HiringCategoriesAndLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class JobsCategoriesAndLocation extends StatelessWidget {
       child: Column(
         crossAxisAlignment: .stretch,
         children: [
-          JobsCategories(),
-          JobsLocations(),
+          HiringCategories(),
+          HiringLocations(),
           Padding(
             padding: .symmetric(horizontal: 8.r),
             child: AppButton(

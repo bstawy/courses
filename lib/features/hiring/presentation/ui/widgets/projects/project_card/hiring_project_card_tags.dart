@@ -4,11 +4,11 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import '../../../../../../../core/extension/theme_ext.dart';
 import '../../../../../../../core/widgets/app_chip.dart';
 
-class JobsProjectCardTags extends StatelessWidget {
+class HiringProjectCardTags extends StatelessWidget {
   final List<String> tags;
   final String timeAgo;
 
-  const JobsProjectCardTags({
+  const HiringProjectCardTags({
     super.key,
     required this.tags,
     required this.timeAgo,
