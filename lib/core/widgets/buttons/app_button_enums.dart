@@ -1,4 +1,4 @@
-enum AppButtonVariant { primary, outlined, dark }
+enum AppButtonVariant { primary, outlined, dark, surface }
 
 enum AppIconButtonVariant {
   primary, // Red background, white icon

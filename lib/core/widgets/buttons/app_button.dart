@@ -49,12 +49,14 @@ class AppButton extends StatelessWidget {
       AppButtonVariant.primary => colorScheme.primary,
       AppButtonVariant.outlined => Colors.transparent,
       AppButtonVariant.dark => colorScheme.inverseSurface,
+      AppButtonVariant.surface => colorScheme.surface,
     };
 
     final contentColor = switch (variant) {
       AppButtonVariant.primary => colorScheme.onPrimary,
       AppButtonVariant.outlined => colorScheme.primary,
       AppButtonVariant.dark => colorScheme.onInverseSurface,
+      AppButtonVariant.surface => colorScheme.onSurface,
     };
 
     final borderColor = variant == AppButtonVariant.outlined

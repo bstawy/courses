@@ -8,8 +8,8 @@ class AppChip extends StatelessWidget {
   final String label;
   final Widget? leading;
   final Widget? trailing;
-  final num? horizontalPadding;
-  final num? verticalPadding;
+  final double? horizontalPadding;
+  final double? verticalPadding;
   final Color? backgroundColor;
   final double? borderRadius;
   final Color? borderColor;
@@ -35,10 +35,19 @@ class AppChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Chip(
-      padding: .symmetric(horizontal: 16.w, vertical: 4.h),
-      backgroundColor: context.colors.primary.withValues(alpha: 0.1),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.r)),
-      side: BorderSide(color: Colors.transparent, width: 0.w),
+      padding: .symmetric(
+        horizontal: horizontalPadding ?? 16.w,
+        vertical: verticalPadding ?? 4.h,
+      ),
+      backgroundColor:
+          backgroundColor ?? context.colors.primary.withValues(alpha: 0.1),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(borderRadius ?? 50.r),
+      ),
+      side: BorderSide(
+        color: borderColor ?? Colors.transparent,
+        width: borderWidth ?? 0.w,
+      ),
       label: (leading == null && trailing == null)
           ? Text(label)
           : (Row(
@@ -49,9 +58,11 @@ class AppChip extends StatelessWidget {
                 if (trailing != null) ...[Gap(8.w), trailing!],
               ],
             )),
-      labelStyle: context.textStyles.labelSmall?.copyWith(
-        color: context.colors.primary,
-      ),
+      labelStyle:
+          labelStyle ??
+          context.textStyles.labelSmall?.copyWith(
+            color: labelColor ?? context.colors.primary,
+          ),
       labelPadding: .zero,
       elevation: 0,
       surfaceTintColor: Colors.transparent,

@@ -45,9 +45,11 @@ class AppTextStyles extends TextTheme {
           fontWeight: FontWeightHelper.extraBold,
           height: 1.0,
         ),
+        // done
         titleSmall: TextStyle(
           fontSize: 14.sp,
-          fontWeight: FontWeightHelper.medium,
+          fontWeight: FontWeightHelper.extraBold,
+          height: 1.0,
         ),
         // done
         bodyLarge: TextStyle(

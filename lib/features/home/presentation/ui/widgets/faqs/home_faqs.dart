@@ -1,11 +1,10 @@
-import 'package:courses/features/home/presentation/ui/widgets/faqs/home_faqs_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/extension/theme_ext.dart';
-import '../../../../../../core/widgets/app_expansion_tile.dart';
 import '../../../../../../core/widgets/colorful_text.dart';
+import 'home_faqs_item.dart';
 
 class HomeFaqs extends StatelessWidget {
   const HomeFaqs({super.key});
