@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/extension/theme_ext.dart';
+import '../../../../../../core/extension/theme_ext.dart';
 import 'project_card/jobs_project_card.dart';
 
 class JobsProjects extends StatelessWidget {

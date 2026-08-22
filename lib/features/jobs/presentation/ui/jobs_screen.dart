@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../core/helpers/assets_manager.dart';
-import '../home/presentation/ui/widgets/home_app_bar.dart';
+import '../../../../core/helpers/assets_manager.dart';
+import '../../../home/presentation/ui/widgets/home_app_bar.dart';
 import 'widgets/categories_and_location/jobs_categories_and_location.dart';
 import 'widgets/projects/jobs_projects.dart';
 

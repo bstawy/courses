@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/widgets/app_expansion_tile.dart';
-import '../../../../core/widgets/buttons/app_button.dart';
+import '../../../../../../core/widgets/app_expansion_tile.dart';
+import '../../../../../../core/widgets/buttons/app_button.dart';
 
 class JobsLocations extends StatelessWidget {
   const JobsLocations({super.key});

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:gap/gap.dart';
 
-import '../../../../../core/extension/theme_ext.dart';
-import '../../../../../core/widgets/app_chip.dart';
+import '../../../../../../../core/extension/theme_ext.dart';
+import '../../../../../../../core/widgets/app_chip.dart';
 
 class JobsProjectCardTags extends StatelessWidget {
   final List<String> tags;

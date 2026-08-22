@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/extension/theme_ext.dart';
-import '../../../../../core/theme/colors/app_colors.dart';
-import '../../../../../core/theme/typography/font_weight_helper.dart';
-import '../../../../../core/widgets/app_card.dart';
-import '../../../../../core/widgets/buttons/app_button.dart';
+import '../../../../../../../core/extension/theme_ext.dart';
+import '../../../../../../../core/theme/colors/app_colors.dart';
+import '../../../../../../../core/theme/typography/font_weight_helper.dart';
+import '../../../../../../../core/widgets/app_card.dart';
+import '../../../../../../../core/widgets/buttons/app_button.dart';
 import 'jobs_project_card_clipper.dart';
 import 'jobs_project_card_tags.dart';
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/presentation/ui/home_screen.dart';
-import '../../features/jobs/jobs_screen.dart';
+import '../../features/jobs/presentation/ui/jobs_screen.dart';
 import '../../features/layout/ui/layout.dart';
 
 class AppRouter {
